@@ -1,1 +1,37 @@
-/*Schrijf hier jouw CSS*/
+.body-layout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*height : calc(100vh - 873px);*/
+    border: 3px dashed red;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: auto;
+    border: 3px dashed green;
+}
+
+.main-layout article{
+    flex-basis: 75vw;
+    order: 1;
+    border: 3px dashed purple;
+}
+.main-layout nav{
+    flex-basis: 25vw;
+    order: 3;
+}
+.main-layout aside{
+    flex-basis: 25vw;
+    order: 2;
+}
+
+header {
+    flex-basis: 8vw;
+}
+
+footer {
+    flex-basis: 8vw;
+}

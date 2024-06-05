@@ -1,1 +1,14 @@
-/*Schrijf hier jouw css*/
+.main-layout{
+    border: black solid 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.up{
+    border: 3px dashed green;
+}
+
+.down{
+    border: 3px dashed red;
+}
