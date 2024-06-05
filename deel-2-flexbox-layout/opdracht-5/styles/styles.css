@@ -1,1 +1,55 @@
-/*Schrijf hier jouw CSS*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border: 3px solid lightgray;
+}
+
+header{
+    flex-basis: 10rem;
+    flex-grow: 0;
+    flex-shrink:0;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+/*dus als er een element vast staat doe je vh en als iets moet verdeeld*/
+/*worden doe je dit met grow en shrink */
+nav{
+    flex-basis: 25vh;
+    order: 1;
+    flex-grow:0;
+    flex-shrink:0;
+}
+
+article{
+    flex-basis: auto;
+    order:2;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+aside{
+    flex-basis: 25vh;
+    order: 3;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+footer{
+    flex-basis: 10rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+

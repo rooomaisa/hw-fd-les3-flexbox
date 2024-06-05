@@ -1,1 +1,57 @@
-/*Schrijf hier jouw css*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    border: black solid 1px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    background-color: lightyellow;
+    /*font-family:*/
+}
+main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+}
+.up{
+    border: 3px dashed green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+h1 {
+    padding: 3rem 0 .5rem 0;
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: .9rem;
+    padding-bottom: 4rem;
+}
+
+.down{
+    border: 3px dashed blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.article {
+    border: black solid 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: indianred;
+
+}
+

@@ -1,1 +1,74 @@
-/*Schrijf hier jouw CSS*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    border: 3px solid lightgray;
+    /*flex-basis: auto;*/
+}
+/*//hier zeg ik alleen wat wil de nav doen? het is al een kind van de body die */
+/*in row staat dus daar hoef ik niks aan te doen */
+.col-1{
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    flex-basis: 20vw;
+    flex-grow:0;
+    flex-shrink:0;
+    border: 3px dashed green;
+    /*height: 400px;*/
+}
+
+/*hier wil je van richting veranderen dus hier ga je weer die display flex inzetten */
+/*in de html staat een div om de elementen heen t/m footer die maak je dus de parent*/
+.col-2{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink:1;
+    border: 3px dashed black;
+    /*flex-basis: 1400px;*/
+    /*height: 400px;*/
+    /*flex-direction: row;*/
+}
+
+/*de header is een column dus de basis zegt nu hoever naar beneden*/
+header {
+    flex-basis: 10rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/*nu ga je van main een container maken want je wilt dat de itmens erin zich */
+/*weer anders gaan gedragen in html staat main om je articel en aside */
+main {
+    display: flex;
+    flex-direction: row; /* default */
+    flex-basis: auto; /* default hoe breed */
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    & article {
+        flex-basis: 55vw; /*hoe breed*/
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    & aside {
+        flex-basis: 25vw;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
+/*let dus ook op de structuur ik spreek main aan waarin het article en die */
+/*sluit je dus ook weer eerst af voordat je naar footer gaat die valt buiten main */
+footer {
+    flex-basis: 10rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+}
